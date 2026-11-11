@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "dockerComposeFile": "../compose.yaml",
+  "service": "dev",
+  "workspaceFolder": "/workspaces/blog",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [4321],
+  "postCreateCommand": "sudo chown node:node node_modules && npm install",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+services:
+  dev:
+    image: mcr.microsoft.com/devcontainers/javascript-node:24
+    command: sleep infinity
+    volumes:
+      - .:/workspaces/blog:cached
+      - node_modules:/workspaces/blog/node_modules
+    ports:
+      - "4321:4321"
+
+volumes:
+  node_modules:
